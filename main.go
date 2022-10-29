@@ -6,10 +6,11 @@ import (
 )
 
 func main() {
-	// base.TestType()
-	base.TestPointer()
+	base.TestType()
+	// base.TestPointer()
+	composite.TestFunc()
 	// composite.TestStruct()
 	// composite.TestStr()
 	// composite.TestSlice()
-	composite.TestMap()
+	// composite.TestMap()
 }
