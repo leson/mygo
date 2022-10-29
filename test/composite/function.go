@@ -10,6 +10,7 @@ func TestFunc() {
 
 	testAnonymousFunc()
 	testSelfInvocation()
+	testFuncCaculateInternal()
 }
 
 func fibonacci(n int) int {
@@ -40,4 +41,17 @@ func testSelfInvocation() {
 		}
 	}(66, 55)
 	fmt.Printf("r: %v\n", r)
+}
+
+/**
+ * simulate closure
+ */
+func testFuncCaculateInternal() {
+	name := "Alice "
+	age := "18"
+
+	s1 := func() string {
+		return name + age
+	}()
+	fmt.Printf("s1: %v\n", s1)
 }
