@@ -15,4 +15,6 @@ func main() {
 	// composite.TestMap()
 	// composite.TestDefer()
 	composite.TestInterface()
+	// composite.TestInterfaceNest()
+	composite.TestInterfaceOpenClosePrinciple()
 }

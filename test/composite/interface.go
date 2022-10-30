@@ -2,32 +2,32 @@ package composite
 
 import "fmt"
 
-type Pet interface {
+type Animal interface {
 	eat()
 }
 
-type Dog struct {
+type Pig struct {
 	name string
 }
 
-type Cat struct {
+type Sheep struct {
 	name string
 }
 
-func (d Dog) eat() {
-	fmt.Printf("dog's name: %v is eating\n", d.name)
+func (p Pig) eat() {
+	fmt.Printf("pig's name: %v is eating\n", p.name)
 }
 
-func (c Cat) eat() {
-	fmt.Printf("cat's name: %v is eating\n", c.name)
+func (s Sheep) eat() {
+	fmt.Printf("sheep's name: %v is eating\n", s.name)
 }
 
 func TestInterface() {
 	/** testing polymorphism **/
-	var p Pet
-	p = Dog{"旺财"}
-	p.eat()
-	p = Cat{"花花"}
-	p.eat()
+	var an Animal
+	an = Pig{"哼哼"}
+	an.eat()
+	an = Sheep{"咩咩"}
+	an.eat()
 
 }
